@@ -38,14 +38,58 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:200px;
+    animation: circle 1s ease infinite forwards;
 }
 .box-l, .box-r{
     width:60px;
     height:60px;
-    border: 5px solid blue;
+    border: 5px solid #002db3;
     position:absolute;
+    animation:box 1s ease infinite;
+}
+@keyframes box{
+    0%{
+        transform:rotate(90grad);
+    }
+    25%{
+        border:3px solid #660066;
+        transform:rotate(90grad);
+    }
+    50%{
+        transform:rotate(grad);
+    }
+    75%{
+        border:7px solid #cc5200;
+        transform:rotate(90grad);
+    }
+    100%{
+        transform:rotate(90grad);
+    }
 }
 
+@keyframes circle{
+    0%{
+        border-color:red;
+        transform:scale(1);
+    }
+    25%{
+        border-color:blue;
+        transform:scale(1.1);
+    }
+    50%{
+        border-color:yellow;
+        transform:scale(1.2);
+    }
+    75%{
+        border-color:pink;
+        transform:scale(1.1);
+    }
+    100%{
+        border-color:purple;
+        transform:scale(1);
+    }
+}
 
 
 
