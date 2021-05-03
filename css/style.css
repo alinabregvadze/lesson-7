@@ -9,14 +9,14 @@ body>div{
 .clear{
     clear:both;
 }
-.red-box{
+.leftbox{
     width:100px;
     height:100px;
     background-color: red;
     position:absolute;
     animation: red 4s linear 5 none alternate;
 }
-.green-box{
+.rightbox{
     width:100px;
     height:100px;
     background-color: green;
@@ -46,25 +46,25 @@ img{
     height:60px;
     border: 5px solid #002db3;
     position:absolute;
-    animation:box 1s ease infinite;
+    animation:box 1s ease infinite alternate-reverse;
 }
 @keyframes box{
     0%{
-        transform:rotate(90grad);
+        border:10px solid #002db3;
     }
     25%{
-        border:3px solid #660066;
-        transform:rotate(90grad);
+        border: 20px solid #660066;
     }
     50%{
-        transform:rotate(grad);
+        border:30px solid blue;
     }
     75%{
-        border:7px solid #cc5200;
-        transform:rotate(90grad);
+        border:20px solid lime;
+        
     }
     100%{
-        transform:rotate(90grad);
+        border:10px solid purple;
+        transform:rotate(360grad);
     }
 }
 
@@ -82,7 +82,7 @@ img{
         transform:scale(1.2);
     }
     75%{
-        border-color:pink;
+        border-color:lime;
         transform:scale(1.1);
     }
     100%{
@@ -90,8 +90,6 @@ img{
         transform:scale(1);
     }
 }
-
-
 
 @keyframes green{
     0%{
@@ -125,23 +123,23 @@ img{
 }
 @keyframes red{
     0%{
-        background-color: red;
+        background-color: green;
         top:0;
         left:0;
     }
     25%{
-        background-color: blue;
+        background-color: pink;
         top:0;
         left:500px;
     }
     50%{
-        background-color: green;
+        background-color: blue;
         top:500px;
         left:500px;
         border-radius:50%;
     }
     75%{
-        background-color: yellow;
+        background-color: red;
         top:500px;
         left:0;
     }
