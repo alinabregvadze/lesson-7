@@ -1,153 +1,88 @@
+body{
+	transform:translateY(250px);
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background-color: darkgray;
+}
 body>div{
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
 }
-.left-box{
-    float:left;
+a{
+	font-size:30px;
+	text-transform: uppercase;
+	color:purple;
+	font-weight: 700;
+	font-style: italic;
+	text-decoration:underline;
+	position:absolute;
+	right:20px;
+	bottom:0;
 }
-.right-box{
-    float:right;
+.material-icons{
+	color:white;
 }
-.clear{
-    clear:both;
+.icons-h{
+	background-color: red;
+	margin-right:50px;
 }
-.leftbox{
-    width:100px;
-    height:100px;
-    background-color: red;
-    position:absolute;
-    animation: red 4s linear 5 none alternate;
-}
-.rightbox{
-    width:100px;
-    height:100px;
-    background-color: green;
-    position:absolute;
-    right:0;
-    animation: green 4s linear 5 none alternate;
-}
-img{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-}
-.circle-r, .circle-l{
-    width:200px;
-    height:200px;
-    border: 10px solid red;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:200px;
-    animation: circle 1s ease infinite forwards;
-}
-.box-l, .box-r{
-    width:60px;
-    height:60px;
-    border: 5px solid #002db3;
-    position:absolute;
-    animation:box 1s ease infinite alternate-reverse;
-}
-@keyframes box{
-    0%{
-        border:10px solid #002db3;
-    }
-    25%{
-        border: 20px solid #660066;
-    }
-    50%{
-        border:30px solid blue;
-    }
-    75%{
-        border:20px solid lime;
-        
-    }
-    100%{
-        border:10px solid purple;
-        transform:rotate(360grad);
-    }
-}
-
-@keyframes circle{
-    0%{
-        border-color:red;
-        transform:scale(1);
-    }
-    25%{
-        border-color:blue;
-        transform:scale(1.1);
-    }
-    50%{
-        border-color:yellow;
-        transform:scale(1.2);
-    }
-    75%{
-        border-color:lime;
-        transform:scale(1.1);
-    }
-    100%{
-        border-color:purple;
-        transform:scale(1);
-    }
-}
-
-@keyframes green{
-    0%{
-        background-color: green;
-        top:0;
-        right:0;
-    }
-    25%{
-        background-color: pink;
-        top:0;
-        right:500px;
-    }
-    50%{
-        background-color: blue;
-        top:500px;
-        right:500px;
-        border-radius:50%;
-    }
-    75%{
-        background-color: red;
-        top:500px;
-        right:0;
-    }
-    100%{
-        background-color: purple;
-        top:0;
-        right:0;
-        border-radius: 0%;
-    }
+.icons-u{
+	background-color: #548DFF;
+	margin-right:50px;
 
 }
-@keyframes red{
-    0%{
-        background-color: green;
-        top:0;
-        left:0;
-    }
-    25%{
-        background-color: pink;
-        top:0;
-        left:500px;
-    }
-    50%{
-        background-color: blue;
-        top:500px;
-        left:500px;
-        border-radius:50%;
-    }
-    75%{
-        background-color: red;
-        top:500px;
-        left:0;
-    }
-    100%{
-        background-color: purple;
-        top:0;
-        left:0;
-        border-radius: 0%;
-    }
+.icons-d{
+	background-color:#548DFF
+}
+.heart{
+	font-size:50px;
+	animation: heart 1.3s ease infinite alternate-reverse;
+}
+.thumbup, .thumbdown{
+	font-size:60px;
+	animation:thumbup 3s ease-in-out infinite alternate-reverse ;
+}
 
+@keyframes thumbup{
+	0%{
+		transform:rotate(-10grad);
+	}
+	25%{
+		transform:rotate(30grad)
+	}
+	50%{
+		transform:rotate(10grad);
+	}
+	75%{
+		transform:rotate(-30grad);
+	}
+	100%{
+		transform:rotate(5grad);
+	}
+}
+
+@keyframes heart {
+	0%{
+		transform:scale(1);
+	}
+	20%{
+		transform:scale(1.7);
+	}
+	40%{
+		transform:scale(1.1);
+	}
+	60%{
+		transform:scale(1.7);
+	}
+	/*80%{
+		transform:scale(1.2);
+	}*/
+	100%{
+		transform:scale(1);
+	}
 }
